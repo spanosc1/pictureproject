@@ -2,8 +2,13 @@ body {
 	background-color: #343839;
 }
 
-#browse {
-	color: #00bcd4;
+#myform {
+	padding: 20px;
+}
+
+#submit {
+	margin: 20px;
+	margin-top: -15px;
 }
 
 .grid {

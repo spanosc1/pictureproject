@@ -2,7 +2,6 @@ $(document).ready(function() {
 	var images;
 	$("#grid").masonry();
 	$(document).on("mouseenter", "li", function(){
-		console.log("thing");
 		$(this).animate({
 			padding: '2px'
 		}, 200);

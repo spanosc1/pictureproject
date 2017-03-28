@@ -10,8 +10,6 @@
 		<meta name="author" content="Codrops" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="../js/animate.js"></script>
 		<link rel="shortcut icon" href="../favicon.ico"> 
 		<link rel="stylesheet" type="text/css" href="../css/default.css" />
 		<link rel="stylesheet" type="text/css" href="../css/component.css" />
@@ -21,20 +19,22 @@
 		<div class="container">
 			<ul class="grid effect-6" id="grid">
 				
-				<li><img src=""></li>
+				<li id="initial"><img src=""></li>
 
 			</ul>
-			<form method="post" enctype="multipart/form-data">
-				<input type="file" name="myimage" id="browse"/>
-		  		<button type="button" id="submit" class="btn btn-info">Submit</button>
+			<form id="myform" method="post" enctype="multipart/form-data">
+			<input type="file" name="myimage" id="browse"/>
 		  	</form>
+		  	<input id="submit" type="submit" form="myform" class="btn btn-info"/>
 		</div>
 		<script src="../js/masonry.pkgd.min.js"></script>
 		<script src="../js/imagesloaded.js"></script>
 		<script src="../js/classie.js"></script>
 		<script src="../js/AnimOnScroll.js"></script>
+		<script type="text/javascript" src="../js/animate.js"></script>
 		<script>
 			setTimeout(function(){
+				$("#initial").remove();
 				new AnimOnScroll( document.getElementById( 'grid' ), {
 					minDuration : 0.4,
 					maxDuration : 0.7,
